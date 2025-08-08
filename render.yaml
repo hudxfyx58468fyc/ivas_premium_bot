@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: ivasms-bot
+    runtime: python
+    buildCommand: ""
+    startCommand: "python3 main.py"
+    envVars:
+      - key: BOT_TOKEN
+        value: your_telegram_bot_token
+      - key: CHANNEL_ID
+        value: "@your_channel_username"
+      - key: IVASMS_WS_URL
+        value: wss://ivasms.com/socket.io/?EIO=4&transport=websocket
+      - key: IVASMS_AUTH_TOKEN
+        value: your_ivasms_auth_token
